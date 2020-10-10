@@ -21,11 +21,13 @@ const userDetailSlice = createSlice({
       blog: null,
     },
     isPending: false,
+    errorMessage: null,
   },
   reducers: {},
   extraReducers: {
     [getUser.pending]: (state) => {
       state.isPending = true;
+      state.errorMessage = null;
     },
     [getUser.fulfilled]: (state, action) => {
       const {
@@ -51,6 +53,7 @@ const userDetailSlice = createSlice({
     },
     [getUser.rejected]: (state, action) => {
       state.isPending = false;
+      state.errorMessage = action.error.message;
     },
   },
 });

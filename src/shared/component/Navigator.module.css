@@ -18,6 +18,7 @@
 
   .navigator li:last-child {
     margin-top: 0.5rem;
+    margin-right: 0.5rem;
     text-align: center;
   }
 }

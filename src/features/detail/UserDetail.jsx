@@ -10,6 +10,7 @@ const UserDetail = () => {
   const dispatch = useDispatch();
   const isPending = useSelector((state) => state.detail.isPending);
   const userInfo = useSelector((state) => state.detail.userInfo);
+  const errorMessage = useSelector((state) => state.detail.errorMessage);
 
   useEffect(() => {
     dispatch(getUser(userName));
@@ -22,6 +23,8 @@ const UserDetail = () => {
       </h2>
       {isPending === true ? (
         <Pending />
+      ) : errorMessage ? (
+        <p>{errorMessage}</p>
       ) : (
         <div className={styles.userInfo}>
           <div className={styles.avatar}>
