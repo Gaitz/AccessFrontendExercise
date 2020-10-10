@@ -16,7 +16,7 @@ Build an Website which shows the GitHub users in a List
 - [x] setup Redux
 - [x] List page
 - [x] add React-Router
-- [ ] Detail Page
+- [x] Detail Page
 - [ ] Refactor component structure
 - [ ] List page testing
 - [ ] Detail page testing

@@ -38,6 +38,7 @@ const userListSlice = createSlice({
   reducers: {
     appendPageIndex(state, action) {
       state.pageIndex += action.payload;
+      state.isPending = true;
     },
   },
   extraReducers: {
@@ -52,7 +53,7 @@ const userListSlice = createSlice({
       state.isPending = false;
     },
     [getGitHubUsers.rejected]: (state, action) => {
-      console.error(action.error);
+      console.error(action);
       state.isPending = false;
     },
   },

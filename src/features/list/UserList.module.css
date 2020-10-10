@@ -76,7 +76,7 @@
   flex: 1 1 1;
 }
 
-@media (max-width: 455px) {
+@media (max-width: 600px) {
   .paginatedBlock {
     margin: 0 1rem;
   }
