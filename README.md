@@ -1,5 +1,4 @@
-Access Frontend Exercise
-========================
+# Access Frontend Exercise
 
 ## Mission
 
@@ -15,6 +14,8 @@ Build an Website which shows the GitHub users in a List
 - [x] setup Deployment to GitHub page, [document](https://create-react-app.dev/docs/deployment#github-pages)
 - [x] setup ESLint, Prettier, [document](https://create-react-app.dev/docs/setting-up-your-editor#formatting-code-automatically)
 - [x] setup Redux
-- [ ] List page
+- [x] List page
 - [ ] Detail Page
 - [ ] add React-Router
+- [ ] List page testing
+- [ ] Detail page testing

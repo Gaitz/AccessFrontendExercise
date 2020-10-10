@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot UserList 1`] = `
+<div>
+  <article
+    class="listComponent"
+  >
+    <h2
+      class="pageTitle"
+    >
+      User List
+    </h2>
+    <p>
+      Waiting for request
+    </p>
+  </article>
+</div>
+`;
