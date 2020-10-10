@@ -10,7 +10,9 @@ exports[`snapshot UserList 1`] = `
     >
       GitHub User List
     </h2>
-    <p>
+    <p
+      class="pendingBlock"
+    >
       Waiting for request
     </p>
   </article>
