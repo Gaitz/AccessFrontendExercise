@@ -1,49 +1,53 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getGitHubUsers, PER_PAGE } from "./userListSlice";
+import { getGitHubUsers, appendPageIndex, PER_PAGE } from "./userListSlice";
 import styles from "./UserList.module.css";
+import { Link } from "react-router-dom";
 
 const UserList = () => {
   const dispatch = useDispatch();
+
   const users = useSelector((state) => state.list.users);
   const pageIndex = useSelector((state) => state.list.pageIndex);
   const isPending = useSelector((state) => state.list.isPending);
 
   useEffect(() => {
-    dispatch(getGitHubUsers());
-  }, [dispatch]);
+    dispatch(getGitHubUsers(pageIndex));
+  }, [pageIndex, dispatch]);
 
   const anUserInfo = (user, order) => {
     return (
-      <li key={user.id}>
-        <p>{order}</p>
-        <div className={styles.avatar}>
-          <img src={user.avatar_url} alt="avatar" />
-        </div>
-        <p className={styles.userLogin}>{user.login}</p>
-        <p className={styles.siteAdmin}>
-          Site Admin: {user.site_admin ? "true" : "false"}
-        </p>
+      <li className={styles.anUserInfo} key={user.id}>
+        <Link to={`/${user.login}`}>
+          <p>{order}</p>
+          <div className={styles.avatar}>
+            <img src={user.avatarUrl} alt="avatar" />
+          </div>
+          <p className={styles.userLogin}>{user.login}</p>
+          <p className={styles.siteAdmin}>
+            Site Admin: {user.siteAdmin ? "true" : "false"}
+          </p>
+        </Link>
       </li>
     );
   };
 
   return (
     <article className={styles.listComponent}>
-      <h2 className={styles.pageTitle}>User List</h2>
+      <h2 className={styles.pageTitle}>GitHub User List</h2>
       {isPending === true ? (
         <p>Waiting for request</p>
       ) : (
         <>
           <div className={styles.paginatedBlock}>
             <p>
-              This page contains {users.length} items, Current page index:{" "}
-              {pageIndex}
+              This page contains {users.length} items, Current page index:
+              {pageIndex + 1}
             </p>
             <button
               onClick={(event) => {
                 event.preventDefault();
-                dispatch(getGitHubUsers());
+                dispatch(appendPageIndex(1));
               }}
             >
               Get Next Page
@@ -51,7 +55,7 @@ const UserList = () => {
           </div>
           <ul className={styles.userList}>
             {users.map((user, order) =>
-              anUserInfo(user, (pageIndex - 1) * PER_PAGE + order + 1)
+              anUserInfo(user, pageIndex * PER_PAGE + order + 1)
             )}
           </ul>
         </>

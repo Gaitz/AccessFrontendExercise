@@ -15,7 +15,8 @@ Build an Website which shows the GitHub users in a List
 - [x] setup ESLint, Prettier, [document](https://create-react-app.dev/docs/setting-up-your-editor#formatting-code-automatically)
 - [x] setup Redux
 - [x] List page
+- [x] add React-Router
 - [ ] Detail Page
-- [ ] add React-Router
+- [ ] Refactor component structure
 - [ ] List page testing
 - [ ] Detail page testing

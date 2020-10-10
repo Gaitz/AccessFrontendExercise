@@ -1,0 +1,3 @@
+.pageTitle {
+  composes: pageTitle from "../../shared/style/shared.module.css";
+}
