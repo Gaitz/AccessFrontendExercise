@@ -19,4 +19,4 @@ Build an Website which shows the GitHub users in a List
 - [x] Detail Page
 - [x] Testing
 - [x] add pending animation
-- [ ] add back to page by index
+- [x] add back to page by index

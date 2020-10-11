@@ -1,0 +1,18 @@
+.paginatedBlock {
+  display: flex;
+}
+
+.paginatedBlock button {
+  margin-left: 2rem;
+  border-radius: 8%;
+}
+
+.pageIndexLink {
+  margin-right: 0.2rem;
+}
+
+.disabledLink {
+  text-decoration: none;
+  color: #000;
+  pointer-events: none;
+}

@@ -4,15 +4,6 @@
   align-items: center;
 }
 
-.paginatedBlock {
-  display: flex;
-}
-
-.paginatedBlock button {
-  margin-left: 2rem;
-  border-radius: 8%;
-}
-
 .userList {
   list-style: none;
   display: flex;

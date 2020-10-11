@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListPagination component test Get Next Page 1`] = `
+<div>
+  <div
+    class="paginatedBlock"
+  >
+    <p>
+      Page Index:
+       
+      <a
+        class="pageIndexLink "
+        href="/page/0"
+      >
+        0
+      </a>
+      <a
+        class="pageIndexLink disabledLink"
+        href="/page/1"
+      >
+        1
+      </a>
+    </p>
+    <button>
+      Get Next Page
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ListPagination component test page index link by click active link 1`] = `
+<div>
+  <div
+    class="paginatedBlock"
+  >
+    <p>
+      Page Index:
+       
+      <a
+        class="pageIndexLink "
+        href="/page/0"
+      >
+        0
+      </a>
+      <a
+        class="pageIndexLink disabledLink"
+        href="/page/1"
+      >
+        1
+      </a>
+    </p>
+    <button>
+      Get Next Page
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ListPagination component test page index link by click disabled link 1`] = `
+<div>
+  <div
+    class="paginatedBlock"
+  >
+    <p>
+      Page Index:
+       
+      <a
+        class="pageIndexLink disabledLink"
+        href="/page/0"
+      >
+        0
+      </a>
+    </p>
+    <button>
+      Get Next Page
+    </button>
+  </div>
+</div>
+`;
+
+exports[`ListPagination component test snapshot ListPagination 1`] = `
+<div>
+  <div
+    class="paginatedBlock"
+  >
+    <p>
+      Page Index:
+       
+      <a
+        class="pageIndexLink disabledLink"
+        href="/page/0"
+      >
+        0
+      </a>
+    </p>
+    <button>
+      Get Next Page
+    </button>
+  </div>
+</div>
+`;
