@@ -1,6 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { request as gitHubAPI } from "@octokit/request";
 
+/**
+ * API document:
+ * https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-a-user
+ */
+
 const getUser = createAsyncThunk("userDetail/getUser", async (userName) => {
   const response = await gitHubAPI("GET /users/{username}", {
     username: userName,
@@ -21,11 +26,13 @@ const userDetailSlice = createSlice({
       blog: null,
     },
     isPending: false,
+    errorMessage: null,
   },
   reducers: {},
   extraReducers: {
     [getUser.pending]: (state) => {
       state.isPending = true;
+      state.errorMessage = null;
     },
     [getUser.fulfilled]: (state, action) => {
       const {
@@ -51,6 +58,7 @@ const userDetailSlice = createSlice({
     },
     [getUser.rejected]: (state, action) => {
       state.isPending = false;
+      state.errorMessage = action.error.message;
     },
   },
 });

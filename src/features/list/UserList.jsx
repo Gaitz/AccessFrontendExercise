@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getGitHubUsers, appendPageIndex, PER_PAGE } from "./userListSlice";
+import { getGitHubUsers, PER_PAGE } from "./userListSlice";
 import styles from "./UserList.module.css";
 import { Link } from "react-router-dom";
-import Pending from "../../shared/component/Pending";
+import { PageTitle, Pending } from "../../shared/component";
+import ListPagination from "./ListPagination";
 
 const UserList = () => {
   const dispatch = useDispatch();
@@ -35,25 +36,13 @@ const UserList = () => {
 
   return (
     <article className={styles.listComponent}>
-      <h2 className={styles.pageTitle}>GitHub User List</h2>
+      <PageTitle>GitHub User List</PageTitle>
       {isPending === true ? (
         <Pending />
       ) : (
         <>
-          <div className={styles.paginatedBlock}>
-            <p>
-              This page contains {users.length} items, Current page index:
-              {pageIndex + 1}
-            </p>
-            <button
-              onClick={(event) => {
-                event.preventDefault();
-                dispatch(appendPageIndex(1));
-              }}
-            >
-              Get Next Page
-            </button>
-          </div>
+          <ListPagination></ListPagination>
+          <p>This page contains {users.length} items</p>
           <ul className={styles.userList}>
             {users.map((user, order) =>
               anUserInfo(user, pageIndex * PER_PAGE + order + 1)

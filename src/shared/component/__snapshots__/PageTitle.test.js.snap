@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageTitle component test snapshot test 1`] = `
+<div>
+  <h2
+    class="pageTitle"
+  >
+    Test Title 
+    <em>
+      sub element
+    </em>
+  </h2>
+</div>
+`;

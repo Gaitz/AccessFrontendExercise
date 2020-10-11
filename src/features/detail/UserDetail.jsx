@@ -3,13 +3,14 @@ import styles from "./UserDetail.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./userDetailSlice";
-import Pending from "../../shared/component/Pending";
+import { Pending, PageTitle } from "../../shared/component";
 
 const UserDetail = () => {
   const { userName } = useParams();
   const dispatch = useDispatch();
   const isPending = useSelector((state) => state.detail.isPending);
   const userInfo = useSelector((state) => state.detail.userInfo);
+  const errorMessage = useSelector((state) => state.detail.errorMessage);
 
   useEffect(() => {
     dispatch(getUser(userName));
@@ -17,11 +18,13 @@ const UserDetail = () => {
 
   return (
     <article className={styles.userDetailComponent}>
-      <h2 className={styles.pageTitle}>
+      <PageTitle>
         GitHub User: <em>{userName}</em> Detail
-      </h2>
+      </PageTitle>
       {isPending === true ? (
         <Pending />
+      ) : errorMessage ? (
+        <p>{errorMessage}</p>
       ) : (
         <div className={styles.userInfo}>
           <div className={styles.avatar}>

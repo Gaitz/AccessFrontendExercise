@@ -40,6 +40,10 @@ const userListSlice = createSlice({
       state.pageIndex += action.payload;
       state.isPending = true;
     },
+    goToPageIndex(state, action) {
+      state.pageIndex = action.payload;
+      state.isPending = true;
+    },
   },
   extraReducers: {
     [getGitHubUsers.pending]: (state) => {
@@ -60,5 +64,5 @@ const userListSlice = createSlice({
 });
 
 export { getGitHubUsers };
-export const { appendPageIndex } = userListSlice.actions;
+export const { appendPageIndex, goToPageIndex } = userListSlice.actions;
 export default userListSlice.reducer;

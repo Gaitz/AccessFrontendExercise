@@ -4,19 +4,6 @@
   align-items: center;
 }
 
-.pageTitle {
-  composes: pageTitle from "../../shared/style/shared.module.css";
-}
-
-.paginatedBlock {
-  display: flex;
-}
-
-.paginatedBlock button {
-  margin-left: 2rem;
-  border-radius: 8%;
-}
-
 .userList {
   list-style: none;
   display: flex;

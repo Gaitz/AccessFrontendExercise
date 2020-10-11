@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Navigator snapshot test 1`] = `
+<div>
+  <nav
+    class="navigator"
+  >
+    <ul>
+      <li>
+        <a
+          href="/"
+        >
+          Back to List
+        </a>
+      </li>
+      <li>
+        <form
+          data-testid="searchForm"
+        >
+          <label
+            for="userName"
+          >
+            Search user by account: 
+          </label>
+          <input
+            id="userName"
+            name="userName"
+            type="search"
+          />
+          <button
+            type="submit"
+          >
+            go
+          </button>
+        </form>
+      </li>
+    </ul>
+  </nav>
+</div>
+`;

@@ -1,14 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshot UserList 1`] = `
+exports[`UserDetail component test snapshot test 1`] = `
 <div>
   <article
-    class="listComponent"
+    class="userDetailComponent"
   >
     <h2
       class="pageTitle"
     >
-      GitHub User List
+      GitHub User: 
+      <em />
+       Detail
     </h2>
     <p
       class="pendingBlock"

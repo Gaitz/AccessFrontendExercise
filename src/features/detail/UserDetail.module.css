@@ -4,14 +4,11 @@
   align-items: center;
 }
 
-.pageTitle {
-  composes: pageTitle from "../../shared/style/shared.module.css";
-}
-
 .userInfo {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 0.5rem;
 }
 
 .avatar {
