@@ -5,7 +5,7 @@ exports[`test Pending snapshot test 1`] = `
   <p
     class="pendingBlock"
   >
-    Waiting for request
+    Waiting for request 
   </p>
 </div>
 `;

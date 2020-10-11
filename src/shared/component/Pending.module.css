@@ -1,3 +1,19 @@
 .pendingBlock {
   text-align: center;
+  font-size: 2rem;
+}
+
+.pendingBlock::after {
+  content: "\2026";
+  display: inline-block;
+  vertical-align: bottom;
+  overflow: hidden;
+  animation: pending steps(4, end) 900ms infinite;
+  width: 0;
+}
+
+@keyframes pending {
+  to {
+    width: 1.25em;
+  }
 }

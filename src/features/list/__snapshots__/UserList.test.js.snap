@@ -13,7 +13,7 @@ exports[`snapshot UserList 1`] = `
     <p
       class="pendingBlock"
     >
-      Waiting for request
+      Waiting for request 
     </p>
   </article>
 </div>

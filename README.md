@@ -18,5 +18,5 @@ Build an Website which shows the GitHub users in a List
 - [x] add React-Router
 - [x] Detail Page
 - [x] Testing
-- [ ] add pending animation
+- [x] add pending animation
 - [ ] add back to page by index
