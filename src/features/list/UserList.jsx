@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getGitHubUsers, appendPageIndex, PER_PAGE } from "./userListSlice";
 import styles from "./UserList.module.css";
 import { Link } from "react-router-dom";
-import Pending from "../../shared/component/Pending";
+import { PageTitle, Pending } from "../../shared/component";
 
 const UserList = () => {
   const dispatch = useDispatch();
@@ -35,7 +35,7 @@ const UserList = () => {
 
   return (
     <article className={styles.listComponent}>
-      <h2 className={styles.pageTitle}>GitHub User List</h2>
+      <PageTitle>GitHub User List</PageTitle>
       {isPending === true ? (
         <Pending />
       ) : (

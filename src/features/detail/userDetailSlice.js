@@ -1,6 +1,11 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import { request as gitHubAPI } from "@octokit/request";
 
+/**
+ * API document:
+ * https://docs.github.com/en/free-pro-team@latest/rest/reference/users#get-a-user
+ */
+
 const getUser = createAsyncThunk("userDetail/getUser", async (userName) => {
   const response = await gitHubAPI("GET /users/{username}", {
     username: userName,

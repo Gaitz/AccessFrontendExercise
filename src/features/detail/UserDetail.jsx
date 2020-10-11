@@ -3,7 +3,7 @@ import styles from "./UserDetail.module.css";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser } from "./userDetailSlice";
-import Pending from "../../shared/component/Pending";
+import { Pending, PageTitle } from "../../shared/component";
 
 const UserDetail = () => {
   const { userName } = useParams();
@@ -18,9 +18,9 @@ const UserDetail = () => {
 
   return (
     <article className={styles.userDetailComponent}>
-      <h2 className={styles.pageTitle}>
+      <PageTitle>
         GitHub User: <em>{userName}</em> Detail
-      </h2>
+      </PageTitle>
       {isPending === true ? (
         <Pending />
       ) : errorMessage ? (
