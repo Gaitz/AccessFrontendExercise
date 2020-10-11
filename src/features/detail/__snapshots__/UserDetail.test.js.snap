@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserDetail component test snapshot test 1`] = `
+<div>
+  <article
+    class="userDetailComponent"
+  >
+    <h2
+      class="pageTitle"
+    >
+      GitHub User: 
+      <em />
+       Detail
+    </h2>
+    <p
+      class="pendingBlock"
+    >
+      Waiting for request
+    </p>
+  </article>
+</div>
+`;
