@@ -4,10 +4,17 @@
 
 Build an Website which shows the GitHub users in a List
 
+## Result
+
+- deploy on GitHub page, [link](https://gaitz.github.io/AccessFrontendExercise/)
+
 ### Technical stack
 
 - Create-react-app
-- Redux
+- Redux / Redux Toolkit
+- Jest / React testing library
+- React Router
+- CSS modules for style
 
 ### Todo
 
