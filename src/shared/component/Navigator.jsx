@@ -14,6 +14,7 @@ const Navigator = () => {
         </li>
         <li>
           <form
+            data-testid="searchForm"
             onSubmit={(event) => {
               event.preventDefault();
               history.push(`/${userName}`);
