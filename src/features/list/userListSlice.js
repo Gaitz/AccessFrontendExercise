@@ -38,11 +38,9 @@ const userListSlice = createSlice({
   reducers: {
     appendPageIndex(state, action) {
       state.pageIndex += action.payload;
-      state.isPending = true;
     },
     goToPageIndex(state, action) {
       state.pageIndex = action.payload;
-      state.isPending = true;
     },
   },
   extraReducers: {
